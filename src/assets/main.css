@@ -1,0 +1,27 @@
+body{
+  margin: 0;
+  padding: 0;
+  color: #282C34;
+  background: #E5E5EA;
+}
+
+@import '~antd/dist/antd.css';
+
+.app-layout .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+.app-layout .trigger:hover {
+  color: #1890ff;
+}
+
+.app-layout .logo {
+  height: 32px;
+  background: rgba(255,255,255,.2);
+  margin: 16px;
+}
+
