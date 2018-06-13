@@ -1,13 +1,13 @@
 import React from 'react'
 // import AppLayout from './components/AppLayout'
-import RouterView from './components/views'
+import AppView from './components/view'
 
 class App extends React.Component {
   render () {
     return (
       <div className="main">
         {/*<AppLayout />*/}
-        <RouterView />
+        <AppView />
       </div>
     )
   }

@@ -2,18 +2,41 @@ import React from 'react'
 import {
   BrowserRouter as Router,
   Link,
-  Route
+  Route,
+  Switch,
+  Redirect
 } from 'react-router-dom'
 // import RouterView from '../router'
 // import { Layout, Menu, Icon } from 'antd'
 // const { Header, Sider, Content } = Layout
 
+function Home () {
+  return (
+    <div>
+      <p>Home</p>
+      <Switch>
+        <Route exact path="/" component={Test}/>
+        <Route exact path="/user" component={User}/>
+        <Route exact path="/user/:userId" component={UserInfo}/>
+        <Redirect from="/test" to="/user" />
+        <Route path="" component={NotMatch} />
+      </Switch>
+    </div>
+  )
+}
+function Test () {
+  return <div>Home.index</div>
+}
 function User () {
   return <div>User</div>
 }
 
 function UserInfo () {
   return <div>UserInfo</div>
+}
+
+function NotMatch () {
+  return <div style={{color: '#dc253d'}}>404 Not Found</div>
 }
 
 class View extends React.Component {
@@ -29,12 +52,30 @@ class View extends React.Component {
     return (
       <Router>
         <div>
-        <Link to="/">Home</Link>
-        <Link to="/user">User</Link>
+
+        <Link to="/">Home</Link>&nbsp;
+        <Link to="/user">User</Link>&nbsp;
+        <Link to="/user/1001">Info</Link>&nbsp;
+        <Link to="/test">Redirect</Link>&nbsp;
+        <Link to="/404">404</Link>
           {/*<RouterView />*/}
-          <Route exact path="/user">
-            <Route path="/info" component={UserInfo}/>
-          </Route>
+          {/*<Route exact path="/user">
+            
+          </Route>*/}
+          <Switch>
+            <Route exact path="/te" component={Test} />
+
+            <Route path="/" component={Home} />
+
+            {/*<Switch>
+              <Route exact path="/" component={Home}/>
+              <Route exact path="/user" component={User}/>
+              <Route exact path="/user/:userId" component={UserInfo}/>
+              <Redirect from="/test" to="/user" />
+              <Route exact component={NotMatch} />
+            </Switch>*/}
+            
+          </Switch>
         </div>
         {/*<Layout className="app-layout">
           <Sider
