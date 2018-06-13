@@ -50,9 +50,11 @@ h1,h2,h3,h4,h5,h6{
 }
 .app-layout .ant-layout-header{
   padding: 0;
+  height: 50px;
+  line-height: 50px;
 }
 .app-layout .ant-layout-header .ant-menu{
-  line-height: 64px;
+  line-height: 50px;
   background: #29ABE2;
 }
 .app-layout .ant-layout-header .ant-menu.ant-menu-dark .ant-menu-item-selected,
@@ -63,19 +65,38 @@ h1,h2,h3,h4,h5,h6{
   font-size: 18px;
   padding: 0 24px;
   cursor: pointer;
-  transition: color .3s;
+  transition: color 0.3s;
   color: #E8E8ED;
 }
 
 
 .app-layout .ant-layout-header .trigger:hover {
-  color: #F7F7F7;
+  color: #fff;
 }
 
-.app-layout .ant-layout-sider .logo {
+.app-layout .ant-layout-sider .logo-box {
+  box-sizing: border-box;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 15px;
+  color: #e6e5e5;
+  overflow: hidden;
+  transition: padding 0.2s ease;
+}
+.app-layout .ant-layout-sider.ant-layout-sider-collapsed .logo-box{
+  padding: 0 23px;
+}
+.app-layout .ant-layout-sider.ant-layout-sider-collapsed .logo-box .title{
+  display: none;
+}
+.logo-box .logo{
   height: 32px;
-  background: rgba(255,255,255,.2);
-  margin: 16px;
+  width: 32px;
+  margin-right: 10px;
+}
+.logo-box .title{
+  font-size: 1.2rem;
+  font-weight: 100;
 }
 
 .app-layout .ant-layout-content{
@@ -90,5 +111,6 @@ h1,h2,h3,h4,h5,h6{
   line-height: 50px;
   overflow: hidden;
   padding: 0 16px;
+  color: #94989e;
 }
 
