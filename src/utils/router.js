@@ -58,7 +58,7 @@ export default class Router {
     let that = this
     if (name === 'default') {
       return (
-        <BrowserRouter >
+        <BrowserRouter>
           <Switch>
             {that.routerMap[name]}
           </Switch>
