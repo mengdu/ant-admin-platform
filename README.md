@@ -11,13 +11,16 @@ An admin platform based on Ant design.
 ## src
 
 ```ls
-  ├─assets
-  │  └─main
-  ├─components
-  ├─config
-  ├─router
-  ├─utils
-  └─views
+├─src
+  │
+  ├─assets 静态资源
+  ├─components 组件
+  ├─config 配置
+  ├─router 路由
+  ├─utils  工具
+  ├─views  页面
+  ├─App.jsx 页面入口
+  └─index.js 程序入口
 ```
 
 
