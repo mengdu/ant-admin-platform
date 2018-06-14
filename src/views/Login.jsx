@@ -20,7 +20,9 @@ class Login extends React.Component{
             isLoding: false
           })
           this.$msg.success('登陆成功')
-          this.props.history.push('/admin')
+          setTimeout(() => {
+            this.props.history.push('/admin')
+          }, 500)
         })
       }
     })
@@ -36,7 +38,7 @@ class Login extends React.Component{
     return (
       <div  className="middle-box login-page">
 
-        <div className="m-box login-form blur-0">
+        <div className={'m-box login-form' + (this.state.isLoding ? ' blur-2' : ' blur-0')}>
           <div className="login-form-wallpaper"></div>
           <div className="text-center"><img src={this.$config.data.logo} width="128" height="128" alt="logo" className="logo" /></div>
           <Form onSubmit={this.onSubmit}>

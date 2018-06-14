@@ -20,7 +20,16 @@ h1,h2,h3,h4,h5,h6{
   text-align: center;
 }
 .blur-0{
-  filter: blur(0);
+  filter: blur(0px);
+}
+.blur-1{
+  filter: blur(1px);
+}
+.blur-2{
+  filter: blur(2px);
+}
+.blur-4{
+  filter: blur(4px);
 }
 .blur-7{
   filter: blur(7px);
