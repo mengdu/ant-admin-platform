@@ -1,24 +1,15 @@
 import React from 'react'
-import {Icon} from 'antd'
+import {Icon, Tag} from 'antd'
 
-let versionStyle = {
-  backgroundColor: 'rgba(64,158,255,.1)',
-  padding: '0 10px',
-  height: '32px',
-  lineHeight: '30px',
-  fontSize: '12px',
-  color: '#409eff',
-  borderRadius: '4px',
-  boxSizing: 'border-box',
-  border: '1px solid rgba(64,158,255,.2)',
-}
 export default class AppFooter extends React.Component {
+
   render () {
+    let repository = this.$app.repository.url.replace(/git\+/, '')
     return (
       <div className="text-center">
-        <Icon type="ant-design" /> ant-admin-platform Make by &nbsp;
+        <a href={repository} target="_blank" rel="noopener noreferrer"><Icon type="github" />&nbsp;{this.$app.name}</a>  Make by &nbsp;
         <a href={this.$app.authorHome || '#'} >{this.$app.author}</a>&nbsp;
-        <span >version: <span style={versionStyle}>{this.$app.version}</span></span>
+        <span >version: <Tag color="blue">{this.$app.version}</Tag></span>
       </div>
     )
   }

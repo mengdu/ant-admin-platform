@@ -6,10 +6,15 @@
     "animate.css": "^3.6.1",
     "antd": "^3.6.2",
     "nprogress": "^0.2.0",
+    "rc-queue-anim": "^1.6.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4"
+  },
+  "repository": {
+    "type": "https",
+    "url": "git+https://github.com/mengdu/ant-admin-platform"
   },
   "author": "lanyueos@qq.com",
   "license": "MIT",
