@@ -4,9 +4,9 @@ An admin platform based on Ant design.
 
 > This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-[截图](20180614222032.png)
+![截图](20180614222032.png)
 
-[login](20180614222241.png)
+![login](20180614222241.png)
 
 ## src
 
