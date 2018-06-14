@@ -1,7 +1,7 @@
 {
   "name": "ant-admin-platform",
   "version": "0.1.0",
-  "private": true,
+  "description": "An admin platform based on Ant design.",
   "dependencies": {
     "animate.css": "^3.6.1",
     "antd": "^3.6.2",
