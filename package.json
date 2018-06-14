@@ -19,6 +19,7 @@
   "author": "lanyueos@qq.com",
   "license": "MIT",
   "scripts": {
+    "dev": "set PORT=8080 && react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
