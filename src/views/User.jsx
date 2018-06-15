@@ -4,7 +4,7 @@ import {Breadcrumb} from 'antd'
 export default class User extends React.Component {
   render () {
     // console.log(this.$app)
-    // console.log(this.props)
+    console.log(this.props)
     return (
       <div>
         <Breadcrumb style={{ margin: '16px 16px' }}>

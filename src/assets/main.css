@@ -47,6 +47,15 @@ h1,h2,h3,h4,h5,h6{
 @import '~animate.css';
 @import '~antd/dist/antd.css';
 
+#nprogress .bar {
+  background: #812CB2 !important;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: #812CB2 !important;
+  border-left-color: #812CB2 !important;
+}
+
 .app-layout{
   min-height: calc(100vh);
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import RouterWrapper from './router-wrapper'
 
 function makeRoute (route) {
   return (
@@ -7,7 +8,7 @@ function makeRoute (route) {
       exact={route.exact}
       path={route.path}
       key={route.name ? route.name : route.path}
-      component={route.component}
+      render={(props) => <RouterWrapper {...props}>{route.component}</RouterWrapper>}
       />
   )
 }

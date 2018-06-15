@@ -17,7 +17,7 @@ export default class AppSider extends React.Component {
           mode="inline"
         >
           <SubMenu key="sub1" title={<div><Icon type="dashboard" /><span>Dashboard</span></div>}>
-            <Menu.Item key="1">option1</Menu.Item>
+            <Menu.Item key="1"><Link to="/admin" >Wellcome</Link></Menu.Item>
             <Menu.Item key="2">option2</Menu.Item>
             <Menu.Item key="3">option3</Menu.Item>
             <Menu.Item key="4">option4</Menu.Item>
@@ -29,7 +29,7 @@ export default class AppSider extends React.Component {
             <Menu.Item key="x8">option8</Menu.Item>
           </SubMenu>
           <SubMenu key="sub2" title={<div><Icon type="contacts" /><span>Users</span></div>}>
-            <Menu.Item key="5">option5</Menu.Item>
+            <Menu.Item key="5"><Link to="/admin/user" >user</Link></Menu.Item>
             <Menu.Item key="6">option6</Menu.Item>
             <Menu.Item key="7">option7</Menu.Item>
             <Menu.Item key="8">option8</Menu.Item>
