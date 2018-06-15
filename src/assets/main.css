@@ -72,6 +72,10 @@ h1,h2,h3,h4,h5,h6{
   line-height: 50px;
   background: #29ABE2;
 }
+.app-layout .ant-layout-header .ant-menu-item, 
+.app-layout .ant-layout-header .ant-menu-submenu-title{
+  padding: 0 15px;
+}
 .app-layout .ant-layout-header .ant-menu.ant-menu-dark .ant-menu-item-selected,
 .app-layout .ant-layout-header .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected{
   background: rgba(12, 12, 12, 0.18);

@@ -7,6 +7,7 @@ import UserInfo from '../views/UserInfo'
 import AppLayout from '../components/AppLayout'
 import Dashboard from '../views/Dashboard'
 import Test from '../views/Test'
+import ReduxDemo from '../views/ReduxDemo'
 
 const router = new Router({
   routes: [
@@ -22,6 +23,7 @@ const router = new Router({
         {path: '/', component: Dashboard},
         {path: '/user', component: User},
         {path: '/test', component: Test},
+        {path: '/redux-demo', component: ReduxDemo},
         {name: 404, component: NotMatch}
       ]
     },

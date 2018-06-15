@@ -9,7 +9,7 @@ export default class AppSider extends React.Component {
     return (
       <Sider collapsed={this.props.collapsed} trigger={null}>
         <div className="logo-box" >
-          <img className="logo" src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg" alt="logo" />
+          <img className="logo" src={this.$config.data.logo} alt="logo" />
           <span className="title">Antd Platform </span>
         </div>
         <Menu
@@ -37,14 +37,14 @@ export default class AppSider extends React.Component {
           <SubMenu key="sub3" title={<div><Icon type="eye-o" /><span>Pages</span></div>}>
             <Menu.Item key="404"><Link to="/404" >全局404</Link></Menu.Item>
             <Menu.Item key="404-in"><Link to="/admin/404" >页内404</Link></Menu.Item>
-            <Menu.Item key="10">option10</Menu.Item>
+            <Menu.Item key="10"><Link to="/admin/redux-demo" >redux-demo</Link></Menu.Item>
             <Menu.Item key="11">option11</Menu.Item>
             <Menu.Item key="12">option12</Menu.Item>
           </SubMenu>
           <SubMenu key="sss" title={<div><Icon type="setting" /><span>Setting</span></div>}>
             <Menu.Item key="sss"><Link to="/404" >全局404</Link></Menu.Item>
             <Menu.Item key="ss-in"><Link to="/admin/404" >页内404</Link></Menu.Item>
-            <Menu.Item key="ssa">option10</Menu.Item>
+            <Menu.Item key="ssa"><Link to="/admin/redux-demo" >redux-demo</Link></Menu.Item>
             <Menu.Item key="aaaa">option11</Menu.Item>
             <Menu.Item key="sass">option12</Menu.Item>
           </SubMenu>
