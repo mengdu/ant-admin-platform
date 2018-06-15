@@ -23,6 +23,12 @@ An admin platform based on Ant design.
   └─index.js 程序入口
 ```
 
+## 模块
+
++ **router**
++ **redux**
++ **axios**
++ **antd**
 
 ## Use
 

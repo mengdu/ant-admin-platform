@@ -5,6 +5,7 @@
   "dependencies": {
     "animate.css": "^3.6.1",
     "antd": "^3.6.2",
+    "axios": "^0.18.0",
     "nprogress": "^0.2.0",
     "rc-queue-anim": "^1.6.2",
     "react": "^16.4.0",
