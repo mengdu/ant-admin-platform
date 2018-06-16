@@ -30,6 +30,24 @@ An admin platform based on Ant design.
 + **axios**
 + **antd**
 
+
+## 接口代理
+
+**package.json**
+
+```json
+"proxy": {
+  "/api": {
+    "target": "https://cnodejs.org/api",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}
+
+```
+
 ## Use
 
 ```ls

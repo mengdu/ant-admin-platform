@@ -15,6 +15,15 @@
     "react-scripts": "1.1.4",
     "redux": "^4.0.0"
   },
+  "proxy": {
+    "/api": {
+      "target": "https://cnodejs.org/api",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  },
   "repository": {
     "type": "https",
     "url": "git+https://github.com/mengdu/ant-admin-platform"
