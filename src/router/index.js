@@ -8,6 +8,7 @@ import AppLayout from '../components/AppLayout'
 import Dashboard from '../views/Dashboard'
 import Test from '../views/Test'
 import ReduxDemo from '../views/ReduxDemo'
+import MButton from '../views/components/button'
 
 const router = new Router({
   routes: [
@@ -24,6 +25,7 @@ const router = new Router({
         {path: '/user', component: User},
         {path: '/test', component: Test},
         {path: '/redux-demo', component: ReduxDemo},
+        {path: '/components/button', component: MButton},
         {name: 404, component: NotMatch}
       ]
     },
