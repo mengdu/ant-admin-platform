@@ -19,6 +19,7 @@ React.Component.prototype.$modal = Modal
 React.Component.prototype.$notification = notification
 React.Component.prototype.$fetch = axios
 React.Component.prototype.$api = api
+React.Component.prototype.$store = store
 
 const app = ReactDOM.render(
   <Provider store={store}><App /></Provider>,

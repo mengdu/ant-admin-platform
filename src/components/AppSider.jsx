@@ -53,7 +53,8 @@ export default class AppSider extends React.Component {
         icon: 'eye-o',
         submenu: [
           {key: 'g-404', path: '/404', text: '全局404'},
-          {key: '404', path: '/admin/404', text: '404'}
+          {key: '404', path: '/admin/404', text: '404'},
+          {key: 'redux-demo', path: '/admin/redux-demo', text: 'redux-demo'}
         ]
       },
       {
