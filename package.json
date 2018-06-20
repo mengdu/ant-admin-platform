@@ -17,7 +17,7 @@
   },
   "proxy": {
     "/api": {
-      "target": "https://cnodejs.org/api",
+      "target": "http://cnodejs.org/api",
       "changeOrigin": true,
       "pathRewrite": {
         "^/api": ""

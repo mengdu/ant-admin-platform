@@ -1,13 +1,16 @@
 import React from 'react'
 import {Button, Breadcrumb} from 'antd'
 import {connect} from 'react-redux'
+import {doAdd, doReduce} from '../redux/reducers/actions'
 
 class ReduxDemo extends React.Component {
   handleAdd () {
-    this.props.dispatch({type: 'ADD_TODO', val: 1})
+    // this.props.dispatch({type: 'ADD_TODO', val: 1})
+    this.props.dispatch(doAdd(1))
   }
   handleReduce () {
-    this.props.dispatch({type: 'REDUCE_TODO', val: 1})
+    // this.props.dispatch({type: 'REDUCE_TODO', val: 1})
+    this.props.dispatch(doReduce(2))
   }
   render () {
     return (

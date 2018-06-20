@@ -1,14 +1,18 @@
-export default function counter (state = {count: 0}, action) {
+const state = {
+  count: 0
+}
+
+export default function counter (data = state, action) {
   switch (action.type) {
     case 'ADD_TODO':
-      return Object.assign({}, state, {
-        count: state.count + ~~action.val
+      return Object.assign({}, data, {
+        count: data.count + ~~action.val
       })
     case 'REDUCE_TODO':
-      return Object.assign({}, state, {
-        count: state.count - ~~action.val
+      return Object.assign({}, data, {
+        count: data.count - ~~action.val
       })
     default:
-      return state
+      return data
   }
 }
