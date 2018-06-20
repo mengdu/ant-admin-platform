@@ -1,0 +1,15 @@
+.m-tabs{}
+.m-tabs .m-tabs-nav{
+  border-bottom: solid 1px #e1dcea;
+  margin-bottom: -1px;
+}
+.m-tabs .m-tabs-nav .m-tabs-tab{
+  height: 100%;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.m-tabs .m-tabs-nav .m-tabs-tab.m-tabs-tab-active{
+  color: #1890FF;
+}
