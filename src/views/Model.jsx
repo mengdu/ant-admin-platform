@@ -7,7 +7,7 @@ class MInput extends React.Component {
   }
   render () {
     return (
-      <input className="form-control" value={this.props.value} onChange={(val) => this.handleChange(val)} palceholder={this.props.palceholder}/>
+      <input className="form-control" value={this.props.value} onChange={(e) => this.handleChange(e)} palceholder={this.props.palceholder}/>
     )
   }
 }
@@ -15,17 +15,25 @@ class MInput extends React.Component {
 export default class Test extends React.Component {
   state = {
     text: 'this is a test',
-    type: 1
+    checked: true,
+    type: 1,
+    obj: {b: 1, c: {e: 2, info: 'successful'}}
   }
-  model (name) {
-    return {
-      value: this.state[name],
-      onChange: (e) => {
-        this.setState({
-          [name]: e.target.value
-        })
-      }
-    }
+  // model (name) {
+  //   return {
+  //     value: this.state[name],
+  //     onChange: (e) => {
+  //       this.setState({
+  //         [name]: e.target.value
+  //       })
+  //     }
+  //   }
+  // }
+  componentWillMount () {
+    window.test = this
+  }
+  handleChange (val) {
+    console.log('change:', val)
   }
   render () {
     return (
@@ -45,7 +53,10 @@ export default class Test extends React.Component {
             <option value="0">测试</option>
             <option value="1">正式</option>
             <option value="2">遗弃</option>
-          </select>
+          </select>&nbsp;
+          <MInput {...this.model('obj.c.info')} palceholder="Input" />&nbsp;&nbsp;
+          <label><input type="checkbox" {...this.model('checked', {field: 'checked', onChange: (val) => this.handleChange(val)})} />checkbox</label>&nbsp;
+          {/*<input type="checkbox" checked={this.state.checked} />&nbsp;*/}
         </div>
       </div>
     )

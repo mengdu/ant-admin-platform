@@ -25,3 +25,26 @@ export function exitFullscreen () {
     document.msExitFullscreen()
   }
 }
+
+
+/**
+* 从属性路径获取值
+* getValueByPath({err: {info: 'xxx'}}, ['err', 'info']) // xxx
+* @param {object} data 对象
+* @param {array} paths 路径数组；如: ['error', 'info']
+* @return {any} 返回属性路径值，不存在返回undefined
+**/
+export const getValueByPath = (data, paths) => {
+  function loop (obj, i) {
+    if (i < paths.length - 1) {
+      if (typeof obj[paths[i]] === 'undefined') {
+        return undefined
+      } else {
+        return loop(obj[paths[i]], ++i)
+      }
+    } else {
+      return obj[paths[i]]
+    }
+  }
+  return loop(data, 0)
+}

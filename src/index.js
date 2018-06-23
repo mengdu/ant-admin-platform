@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
 import {message, Modal, notification} from 'antd'
 import axios from './utils/axios'
+import model from './utils/model'
 import * as api from './api'
 import App from './App'
 import store from './redux'
@@ -20,6 +21,7 @@ React.Component.prototype.$notification = notification
 React.Component.prototype.$fetch = axios
 React.Component.prototype.$api = api
 React.Component.prototype.$store = store
+React.Component.prototype.model = model
 
 const app = ReactDOM.render(
   <Provider store={store}><App /></Provider>,
