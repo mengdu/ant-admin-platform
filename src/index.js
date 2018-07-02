@@ -23,9 +23,16 @@ React.Component.prototype.$api = api
 React.Component.prototype.$store = store
 React.Component.prototype.model = model
 
+
 const app = ReactDOM.render(
   <Provider store={store}><App /></Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
+  () => {
+    // 设置应用加载进度 window.AppProgress 来自index.html
+    if (window.AppProgress) {
+      window.AppProgress.style = '100%'
+    }
+  }
 )
 
 const isDev = process.env.NODE_ENV === 'development'

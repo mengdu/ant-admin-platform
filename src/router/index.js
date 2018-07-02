@@ -9,6 +9,7 @@ import Dashboard from '../views/Dashboard'
 import Test from '../views/Test'
 import ReduxDemo from '../views/ReduxDemo'
 import MButton from '../views/components/button'
+import MTabs from '../views/components/tabs'
 import Model from '../views/Model'
 
 const router = new Router({
@@ -28,6 +29,7 @@ const router = new Router({
         {path: '/redux-demo', component: ReduxDemo},
         {path: '/model', component: Model},
         {path: '/components/button', component: MButton},
+        {path: '/components/tabs', component: MTabs},
         {name: 404, component: NotMatch}
       ]
     },
