@@ -10,6 +10,9 @@ export default class MButton extends React.Component {
     setTimeout(() => {
       this.setState({clicked: false})
     }, 500)
+    if (this.props.href) {
+      window.location.href = this.props.href
+    }
   }
   render () {
     let {type, size, plain, round, block, active} = this.props

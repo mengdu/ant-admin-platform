@@ -19,9 +19,6 @@ const page = name => {
   })
 }
 
-
-console.log(page('components/button'), Home)
-
 const router = new Router({
   routes: [
     {path: '/', component: Home},
@@ -38,7 +35,6 @@ const router = new Router({
         {path: '/test', component: Test},
         {path: '/redux-demo', component: page('ReduxDemo')},
         {path: '/model', component: page('Model')},
-        // {path: '/components/button', component: MButton},
         {path: '/components/button', component: page('components/button')},
         {path: '/components/tabs', component: page('components/tabs')},
         {name: 404, component: NotMatch}
