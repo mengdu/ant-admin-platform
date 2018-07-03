@@ -1,6 +1,6 @@
 import React from 'react'
 import {Breadcrumb} from 'antd'
-import {MTabs, MTabPanel} from '../../components/m-tabs'
+import {MTabs, MTabPanel} from '@/components/m-tabs'
 
 export default class ButtonIndex extends React.Component {
   handleChange (e) {
