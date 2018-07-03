@@ -21,6 +21,7 @@ React.Component.prototype.$notification = notification
 React.Component.prototype.$fetch = axios
 React.Component.prototype.$api = api
 React.Component.prototype.$store = store
+// 双向绑定
 React.Component.prototype.model = model
 
 

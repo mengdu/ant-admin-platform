@@ -9,6 +9,7 @@
     "rc-queue-anim": "^1.6.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-loadable": "^5.4.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.0"
@@ -32,6 +33,7 @@
     "dev": "set PORT=8080 && node scripts/start.js",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "serve": "php -S localhost:4003 -t ./build",
     "test": "node scripts/test.js --env=jsdom"
   },
   "devDependencies": {

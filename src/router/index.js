@@ -1,3 +1,5 @@
+import React from 'react'
+import Loadable from 'react-loadable'
 import Router from '../utils/router'
 import Home from '../views/Home'
 import User from '../views/User'
@@ -7,10 +9,18 @@ import UserInfo from '../views/UserInfo'
 import AppLayout from '../components/AppLayout'
 import Dashboard from '../views/Dashboard'
 import Test from '../views/Test'
-import ReduxDemo from '../views/ReduxDemo'
-import MButton from '../views/components/button'
-import MTabs from '../views/components/tabs'
-import Model from '../views/Model'
+
+const Loading = () => <div>Loading...</div>
+
+const page = name => {
+  return Loadable({
+    loader: () => import('@/views/' + name),
+    loading: Loading
+  })
+}
+
+
+console.log(page('components/button'), Home)
 
 const router = new Router({
   routes: [
@@ -24,12 +34,13 @@ const router = new Router({
       name: 'admin-view',
       children: [
         {path: '/', component: Dashboard},
-        {path: '/user', component: User},
+        {path: '/user', component: page('user')},
         {path: '/test', component: Test},
-        {path: '/redux-demo', component: ReduxDemo},
-        {path: '/model', component: Model},
-        {path: '/components/button', component: MButton},
-        {path: '/components/tabs', component: MTabs},
+        {path: '/redux-demo', component: page('ReduxDemo')},
+        {path: '/model', component: page('Model')},
+        // {path: '/components/button', component: MButton},
+        {path: '/components/button', component: page('components/button')},
+        {path: '/components/tabs', component: page('components/tabs')},
         {name: 404, component: NotMatch}
       ]
     },
