@@ -1,6 +1,7 @@
 import React from 'react'
 import Loadable from 'react-loadable'
 import Router from 'react-concise-router'
+import nprogress from 'nprogress'
 import Home from './views/Home'
 import User from './views/User'
 import NotMatch from './components/NotMatch'
@@ -45,7 +46,11 @@ const router = new Router({
 })
 
 router.beforeEach = function (ctx, next) {
+  nprogress.start()
   next()
+  setTimeout(() => {
+    nprogress.done()
+  }, 300)
 }
 
 export default router
