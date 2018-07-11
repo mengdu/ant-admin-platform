@@ -8,6 +8,7 @@
     "axios": "^0.18.0",
     "rc-queue-anim": "^1.6.2",
     "react": "^16.4.0",
+    "react-concise-router": "^0.1.0",
     "react-dom": "^16.4.0",
     "react-loadable": "^5.4.0",
     "react-redux": "^5.0.7",

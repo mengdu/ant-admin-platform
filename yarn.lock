@@ -6137,6 +6137,10 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-concise-router@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/react-concise-router/-/react-concise-router-0.1.0.tgz#fabad52694bab60d0ca541799abbc400246a28a3"
+
 react-dev-utils@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-5.0.1.tgz#1f396e161fe44b595db1b186a40067289bf06613"

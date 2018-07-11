@@ -1,36 +1,45 @@
 import React from 'react'
 import {Breadcrumb} from 'antd'
-const MButton = () => import('@/components/m-button')
-window.MButton = MButton
+const store = React.createContext({
+  info: 'this is a test.'
+})
+window.store = store
+
+
+function TestComponent (props) {
+  console.log(props)
+  return (
+    <div>
+      {JSON.stringify(props.data.list)}
+    </div>
+  )
+}
 
 export default class Test extends React.Component {
   state = {
     text: 'this is a test',
     obj: {
       b: 1
-    },
-    button: () => <div>loading...</div>
+    }
   }
-  componentDidMount () {
-    window.test = this
-    MButton().then(res => {
-      console.log(res)
-      this.setState({
-        button: res.default
-      })
-    })
+  data = {
+    list: [{}]
   }
   render () {
+    // console.log(this)
     return (
+      <store.Provider value={this.data}>
       <div>
         <Breadcrumb style={{ margin: '16px 16px' }}>
           <Breadcrumb.Item>Test</Breadcrumb.Item>
         </Breadcrumb>
         <div className="m-box">
-          <pre>{JSON.stringify(this.state.obj)}</pre>
-          <div><this.state.button>Button</this.state.button></div>
+        <store.Consumer>
+          {data => <TestComponent {...this.props} data={data} />}
+        </store.Consumer>
         </div>
       </div>
+      </store.Provider>
     )
   }
 }

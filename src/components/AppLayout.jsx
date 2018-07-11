@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {message, Layout, BackTop} from 'antd'
 import {Redirect} from 'react-router-dom'
-import RouterView from '../router'
+import router from '../router'
 import AppHeader from './AppHeader'
 import AppSider from './AppSider'
 import AppFooter from './AppFooter'
@@ -36,7 +36,7 @@ class App extends Component {
         <Layout>
           <AppHeader onClick={this.toggle} collapsed={this.state.collapsed}/>
           <Content>
-            <RouterView view="admin-view"/>
+            <router.view name="admin-view"/>
           </Content>
           <Footer >
             <AppFooter />

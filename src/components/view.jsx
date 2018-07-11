@@ -1,10 +1,10 @@
 import React from 'react'
-import RouterView from '../router'
+import router from '../router'
 
 class View extends React.Component {
   render () {
     return (
-      <RouterView />
+      <router.view />
     )
   }
 }
