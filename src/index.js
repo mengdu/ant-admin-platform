@@ -24,17 +24,12 @@ React.Component.prototype.$store = store
 // 双向绑定
 React.Component.prototype.model = model
 
-
+// setTimeout(() => {
 const app = ReactDOM.render(
   <Provider store={store}><App /></Provider>,
-  document.getElementById('root'),
-  () => {
-    // 设置应用加载进度 window.AppProgress 来自index.html
-    if (window.AppProgress) {
-      window.AppProgress.style = '100%'
-    }
-  }
+  document.getElementById('root')
 )
+// }, 5000)
 
 const isDev = process.env.NODE_ENV === 'development'
 window.$app = {
