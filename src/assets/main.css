@@ -255,3 +255,51 @@ h1,h2,h3,h4,h5,h6{
   left: 0;
   z-index: -1;
 }
+
+.fade-enter {
+  opacity: 0;
+  transform: scale(0);
+}
+
+
+/*设置进场过程中 透明度为1，防缩为1，放缩的位置为左上角，持续时间为500ms，时间曲是ease-out */
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transform-origin: top left;
+  transition: 800ms ease-out;
+}
+
+/*设置退场前透明度为1，防缩为1*/
+.fade-exit{
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*设置退场过程中 透明度为0，防缩为0，放缩的位置默认是中间，所以不设置也可以，
+持续时间为500ms，时间曲是ease-out */
+.fade-exit.fade-exit-active{
+  opacity:0;
+  transform: scale(0);
+  transition: 800ms ease-out;
+}
+
+.message-enter {
+  opacity: 0.01;
+  transform: scale(0.9) translateY(50%);
+}
+.message-enter-active {
+  opacity: 1;
+  transform: scale(1) translateY(0%);
+  transition: all 300ms ease-out;
+}
+.message-exit {
+  opacity: 1;
+  transform: scale(1) translateY(0%);
+}
+.message-exit-active {
+  opacity: 0.01;
+  transform: scale(0.9) translateY(50%);
+  transition: all 300ms ease-out;
+}
+

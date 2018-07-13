@@ -1,45 +1,45 @@
 import React from 'react'
 import {Breadcrumb} from 'antd'
-const store = React.createContext({
-  info: 'this is a test.'
-})
-window.store = store
+// import {TransitionGroup, CSSTransition} from 'react-transition-group'
+import QueueAnim from 'rc-queue-anim'
 
-
-function TestComponent (props) {
-  console.log(props)
-  return (
-    <div>
-      {JSON.stringify(props.data.list)}
-    </div>
-  )
+function Show (props) {
+  if (props.if) {
+    return props.children
+  }
+  return null
 }
-
 export default class Test extends React.Component {
   state = {
-    text: 'this is a test',
-    obj: {
-      b: 1
-    }
-  }
-  data = {
-    list: [{}]
+    tag: 'test',
+    show: false
   }
   render () {
     // console.log(this)
     return (
-      <store.Provider value={this.data}>
       <div>
         <Breadcrumb style={{ margin: '16px 16px' }}>
           <Breadcrumb.Item>Test</Breadcrumb.Item>
         </Breadcrumb>
         <div className="m-box">
-        <store.Consumer>
-          {data => <TestComponent {...this.props} data={data} />}
-        </store.Consumer>
+        <p>
+          <input type="checkbox" {...this.model('show', {field: 'checked'})} />
+        </p>
+        
+        {/* <TransitionGroup> */}
+          {/* <CSSTransition in={this.state.show} classNames="fade" timeout={500}} > */}
+          <QueueAnim>
+            <div key="1">enter in queue</div>
+            <div key="2">enter in queue</div>
+            <div key="3">enter in queue</div>
+            {this.state.show && (<div key="a" style={{width: '400px', height: '200px', background: '#ccc'}}></div>)}
+          </QueueAnim>
+          {/* </CSSTransition> */}
+        {/* </TransitionGroup> */}
+        
         </div>
       </div>
-      </store.Provider>
+
     )
   }
 }
