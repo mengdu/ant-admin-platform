@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {message, Layout, BackTop} from 'antd'
 import {Redirect} from 'react-router-dom'
+// import QueueAnim from 'rc-queue-anim'
 import router from '../router'
 import AppHeader from './AppHeader'
 import AppSider from './AppSider'
