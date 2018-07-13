@@ -96,10 +96,12 @@
         var progressBox = document.getElementById('progress-box')
         var progress = document.getElementById('progress')
         var AppRoot = document.getElementById('root')
-        var progressTotal = progressBox.offsetWidth
+        var total = progressBox.offsetWidth
         var clock = setInterval(function() {
           var x = progress.offsetWidth
-          progress.style.width = ((progressTotal - x) * 0.5 + x) / progressTotal * 100 + '%'
+          if (x / total < 0.95) {
+            progress.style.width = ((total - x) * 0.5 + x) / total * 100 + '%'
+          }
           if (AppRoot.children.length > 0) {
             clock = clearInterval(clock)
             setTimeout(function () {
