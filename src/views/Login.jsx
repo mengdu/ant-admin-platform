@@ -41,7 +41,7 @@ class Login extends React.Component{
         <div className={'m-box login-form' + (this.state.isLoding ? ' blur-2' : ' blur-0')}>
           <div className="login-form-wallpaper"></div>
           <div className="text-center"><img src={this.$config.data.logo} width="100" height="100" alt="logo" className="logo" /></div>
-          <h1 className="text-center" style={{color: '#1890FF', fontSize: 'rgba(24, 144, 255, 0.91)'}}>ANTD ADMIN</h1>
+          {/* <h1 className="text-center" style={{color: '#1890FF', fontSize: 'rgba(24, 144, 255, 0.91)'}}>ANTD ADMIN</h1> */}
           <Form onSubmit={this.onSubmit}>
             <Form.Item>
               {getFieldDecorator('username', {

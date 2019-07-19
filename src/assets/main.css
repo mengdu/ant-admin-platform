@@ -230,10 +230,10 @@ h1,h2,h3,h4,h5,h6{
   width: 280px;
   box-shadow: 0 0 7px rgba(2, 2, 2, 0.12);
   border-radius: 5px;
-/*  position: relative;*/
   z-index: 1000;
   overflow: hidden;
   transition: filter 0.3s ease;
+  background: none;
 }
 .login-form .logo{
   /*margin-top: -80px;*/
@@ -246,7 +246,8 @@ h1,h2,h3,h4,h5,h6{
   background-size: cover;
 }
 .login-form-wallpaper{
-  filter: blur(16px);
+  background-attachment: fixed;
+  filter: blur(10px);
   position: absolute;
   width: 100%;
   height: 100%;
