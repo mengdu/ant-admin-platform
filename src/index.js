@@ -24,18 +24,18 @@ React.Component.prototype.$store = store
 // 双向绑定
 React.Component.prototype.model = model
 
-// setTimeout(() => {
 const app = ReactDOM.render(
   <Provider store={store}><App /></Provider>,
   document.getElementById('root')
 )
-// }, 5000)
 
 const isDev = process.env.NODE_ENV === 'development'
+
 window.$app = {
   pkg,
   env: process.env
 }
+
 window.api = isDev ? api : undefined
 window.app = isDev ? app : undefined
 
