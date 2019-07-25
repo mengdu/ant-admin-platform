@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 import {message, Layout, BackTop} from 'antd'
 import {Redirect} from 'react-router-dom'
-// import QueueAnim from 'rc-queue-anim'
-// import {TransitionGroup, CSSTransition} from 'react-transition-group'
 import router from '../router'
 import AppHeader from './AppHeader'
 import AppSider from './AppSider'
@@ -38,13 +36,7 @@ class App extends Component {
         <Layout>
           <AppHeader onClick={this.toggle} collapsed={this.state.collapsed}/>
           <Content>
-            {/* <TransitionGroup> */}
-            {/* <CSSTransition appear={true} classNames="fade" timeout={300}> */}
-            {/* <QueueAnim> */}
-            <router.view name="admin-view" key="xx"/>
-            {/* </QueueAnim> */}
-            {/* </CSSTransition> */}
-            {/* </TransitionGroup> */}
+            {router.view('admin-view')}
           </Content>
           <Footer >
             <AppFooter />

@@ -11,6 +11,7 @@
     "nprogress": "^0.2.0",
     "rc-queue-anim": "^1.6.2",
     "rc-texty": "^0.1.1",
+    "rc-tween-one": "^2.4.1",
     "react": "^16.8.6",
     "react-concise-router": "^0.2.0",
     "react-dom": "^16.8.6",

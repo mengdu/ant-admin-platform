@@ -3,9 +3,7 @@ import router from '../router'
 
 class View extends React.Component {
   render () {
-    return (
-      <router.view />
-    )
+    return router.view()
   }
 }
 
