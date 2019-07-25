@@ -6,7 +6,7 @@ import {
   exitFullscreen
 } from '../utils/index'
 
-const {Header} = Layout
+const { Header } = Layout
 
 export default class AppHeader extends React.Component {
   state = {
@@ -96,7 +96,6 @@ export default class AppHeader extends React.Component {
         </div>
         <div>
           <Menu
-            theme="dark"
             mode="horizontal"
             >
             <Menu.Item key="1"><Link to="/">Home</Link></Menu.Item>

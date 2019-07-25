@@ -1,14 +1,12 @@
 import React from 'react'
-import AppView from './components/view'
+import router from './router'
 
-class App extends React.Component {
-  render () {
-    return (
-      <div className="main">
-        <AppView />
-      </div>
-    )
-  }
+function App () {
+  return (
+    <div className="main">
+      {router.view()}
+    </div>
+  )
 }
 
 export default App

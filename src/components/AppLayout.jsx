@@ -42,7 +42,6 @@ class App extends Component {
             <AppFooter />
           </Footer>
         </Layout>
-        
       </Layout>
     )
   }

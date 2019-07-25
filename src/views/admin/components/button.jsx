@@ -1,6 +1,6 @@
 import React from 'react'
 import {Breadcrumb} from 'antd'
-import MButton from '../../components/m-button'
+import MButton from '../../../components/m-button'
 
 export default class ButtonIndex extends React.Component {
   handleClick (e) {

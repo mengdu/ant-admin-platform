@@ -1,7 +1,7 @@
 import React from 'react'
 import {Button, Breadcrumb} from 'antd'
 import {connect} from 'react-redux'
-import {doAdd, doReduce} from '../redux/reducers/actions'
+import {doAdd, doReduce} from '../../redux/reducers/actions'
 
 class ReduxDemo extends React.Component {
   handleAdd () {

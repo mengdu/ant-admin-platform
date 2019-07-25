@@ -92,25 +92,24 @@ h1,h2,h3,h4,h5,h6{
 .ant-layout{
   background: none;
 }
-.app-layout .ant-layout-sider-dark{
-  background: #1F2729;
+
+.app-layout .ant-menu-dark,
+.app-layout .ant-layout-sider-dark,
+.app-layout .ant-menu-dark .ant-menu-sub {
+  background: #19202E;
 }
-.app-layout .ant-menu-dark, 
-.app-layout .ant-menu-dark .ant-menu-sub{
-  background: #1F2729;
-}
+
 .app-layout .ant-menu-horizontal{
   border: none;
+  line-height: 50px;
 }
-.app-layout .ant-layout-header{
+.app-layout .ant-layout-header {
   padding: 0;
   height: 50px;
   line-height: 50px;
+  background: #fff;
 }
-.app-layout .ant-layout-header .ant-menu{
-  line-height: 50px;
-  background: #29ABE2;
-}
+
 .app-layout .ant-layout-header .ant-menu-item, 
 .app-layout .ant-layout-header .ant-menu-submenu-title{
   padding: 0 15px;
@@ -124,7 +123,7 @@ h1,h2,h3,h4,h5,h6{
   padding: 0 24px;
   cursor: pointer;
   transition: color 0.3s;
-  color: #E8E8ED;
+  color: rgba(0, 0, 0, 0.65);
 }
 .ant-menu-dark .ant-menu-item,
 .ant-menu-dark .ant-menu-item-group-title,
@@ -141,9 +140,10 @@ h1,h2,h3,h4,h5,h6{
   height: 50px;
   line-height: 50px;
   padding: 0 15px;
-  color: #e6e5e5;
+  color: #fff;
   overflow: hidden;
   transition: padding 0.2s ease;
+  background-image: linear-gradient(45deg, #1C60E7 -20%, #1B8CE1);
 }
 .app-layout .ant-layout-sider.ant-layout-sider-collapsed .logo-box{
   padding: 0 23px;
@@ -184,16 +184,16 @@ h1,h2,h3,h4,h5,h6{
 .head-nav-list li{
   display: inline-block;
   padding: 0 5px;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(0, 0, 0, 0.65);
 }
 .head-nav-list li > a{
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(0, 0, 0, 0.65);
   text-decoration: none;
   display: inline-block;
   height: 100%;
 }
 .head-nav-list li > a:hover{
-  color: #fff;
+  color: #1890FF;
 }
 .head-nav-list li .anticon {
   margin-right: 5px;
@@ -236,7 +236,6 @@ h1,h2,h3,h4,h5,h6{
   background: none;
 }
 .login-form .logo{
-  /*margin-top: -80px;*/
   margin-bottom: 15px;
 }
 
@@ -256,51 +255,3 @@ h1,h2,h3,h4,h5,h6{
   left: 0;
   z-index: -1;
 }
-
-.fade-enter {
-  opacity: 0;
-  transform: scale(0);
-}
-
-
-/*设置进场过程中 透明度为1，防缩为1，放缩的位置为左上角，持续时间为500ms，时间曲是ease-out */
-.fade-enter.fade-enter-active {
-  opacity: 1;
-  transform: scale(1);
-  transform-origin: top left;
-  transition: 800ms ease-out;
-}
-
-/*设置退场前透明度为1，防缩为1*/
-.fade-exit{
-  opacity: 1;
-  transform: scale(1);
-}
-
-/*设置退场过程中 透明度为0，防缩为0，放缩的位置默认是中间，所以不设置也可以，
-持续时间为500ms，时间曲是ease-out */
-.fade-exit.fade-exit-active{
-  opacity:0;
-  transform: scale(0);
-  transition: 800ms ease-out;
-}
-
-.message-enter {
-  opacity: 0.01;
-  transform: scale(0.9) translateY(50%);
-}
-.message-enter-active {
-  opacity: 1;
-  transform: scale(1) translateY(0%);
-  transition: all 300ms ease-out;
-}
-.message-exit {
-  opacity: 1;
-  transform: scale(1) translateY(0%);
-}
-.message-exit-active {
-  opacity: 0.01;
-  transform: scale(0.9) translateY(50%);
-  transition: all 300ms ease-out;
-}
-

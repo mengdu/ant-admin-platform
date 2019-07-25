@@ -3,14 +3,13 @@ import Loadable from 'react-loadable'
 import Router from 'react-concise-router'
 import QueueAnim from 'rc-queue-anim'
 import nprogress from 'nprogress'
-import Home from './views/Home'
-import User from './views/User'
-import NotMatch from './components/NotMatch'
-import Login from './views/Login'
-import UserInfo from './views/UserInfo'
 import AppLayout from './components/AppLayout'
-import Dashboard from './views/Dashboard'
-import Test from './views/Test'
+import Home from './views/Home'
+import Login from './views/Login'
+import NotMatch from './components/NotMatch'
+import Dashboard from './views/admin/Dashboard'
+import Page1 from './views/admin/Page1'
+import Page2 from './views/admin/Page2'
 
 const Loading = () => <div>Loading...</div>
 
@@ -22,32 +21,26 @@ function animWrapper (Page) {
   }
 }
 
-const page = name => {
-  return Loadable({
-    loader: () => import('@/views/' + name),
-    loading: Loading
-  })
-}
+const ReducDemo = Loadable({
+  loader: () => import('@/views/admin/ReduxDemo'),
+  loading: Loading
+})
 
 const router = new Router({
   routes: [
     { path: '/', component: Home },
-    { path: '/user', component: User },
     { path: '/login', component: Login },
-    { path: '/user/:userId', component: UserInfo },
     {
       path: '/admin',
       component: AppLayout,
       name: 'admin-view',
+      admin: true,
       children: [
-        { path: '/', component: animWrapper(Dashboard) },
-        { path: '/user', component: animWrapper(page('User')) },
-        { path: '/test', component: Test },
-        { path: '/redux-demo', component: page('ReduxDemo') },
-        { path: '/model', component: page('Model') },
-        { path: '/components/button', component: animWrapper(page('components/button'))} ,
-        { path: '/components/tabs', component: page('components/tabs') },
-        { name: 404, component: NotMatch }
+        { path: '/', component: animWrapper(Dashboard), label: 'Dashboard', icon: 'dashboard' },
+        { path: '/redux-demo', component: animWrapper(ReducDemo), label: 'ReduxDemo', icon: 'appstore-o' },
+        { path: '/page1', component: animWrapper(Page1), label: 'Page1', icon: 'eye-o' },
+        { path: '/page2', component: animWrapper(Page2), label: 'Page2', icon: 'eye-o' },
+        { name: 404, component: NotMatch, show: false }
       ]
     },
     { name: 404, component: NotMatch }
