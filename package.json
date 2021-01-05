@@ -6,7 +6,7 @@
     "@antv/g2": "^3.2.2",
     "animate.css": "^3.6.1",
     "antd": "^3.6.2",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "echarts": "^4.1.0",
     "nprogress": "^0.2.0",
     "rc-queue-anim": "^1.6.2",
